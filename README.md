@@ -1,4 +1,6 @@
-# Logon
+# LogOn
+
+This is just a simple application with a log on/create use feature. Nothing big, nothing fancy.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
