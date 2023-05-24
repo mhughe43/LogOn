@@ -1,0 +1,69 @@
+<div class="wholeform">
+<h2>Create New User</h2>
+
+<form (ngSubmit)="createUser()" #createUserForm="ngForm">
+    <div class="field">
+        <label class="required">*</label>
+        <label for="newFirstName">First Name</label>
+        <input type="text" id="newUsername" name="newFirstName" [(ngModel)]="newFirstName" required>
+        <div *ngIf="createUserForm.controls['newFirstName'].invalid && (createUserForm.controls['newFirstName'].dirty || createUserForm.controls['newFirstName'].touched)" class="field-error">
+            First name is required. We gotta know what to call you!
+          </div>
+    </div>
+
+      <div class="field">
+        <label class="required">*</label>
+        <label for="newLastName">Last Name</label>
+        <input type="text" id="newUsername" name="newLastName" [(ngModel)]="newLastName" required>
+        <div *ngIf="createUserForm.controls['newLastName'].invalid && (createUserForm.controls['newLastName'].dirty || createUserForm.controls['newLastName'].touched)" class="field-error">
+            Last name is required. We gotta differentiate you from the others!
+          </div>
+    </div>
+
+      <div class="field">
+        <label class="required">*</label>
+        <label for="newEmail">Email</label>
+        <input type="email" id="newEmail" name="newEmail" [(ngModel)]="newEmail" required>
+        <div *ngIf="createUserForm.controls['newEmail'].invalid && (createUserForm.controls['newEmail'].dirty || createUserForm.controls['newEmail'].touched)" class="field-error">
+            Required! For important updates and notifications
+          </div>
+      </div>
+  
+    <div class="field">
+    <label class="required">*</label>
+    <label for="newUsername">Username</label>
+    <input type="text" id="newUsername" name="newUsername" [(ngModel)]="newUsername" required>
+    <div *ngIf="createUserForm.controls['newUsername'].invalid && (createUserForm.controls['newUsername'].dirty || createUserForm.controls['newUsername'].touched)" class="field-error">
+        Username is required. Pick something cool
+      </div>
+   
+</div>
+
+  <div class="field">
+    <label class="required">*</label>
+    <label for="newPassword">Password</label>
+    <input type="password" id="newPassword" name="newPassword" [(ngModel)]="newPassword" required>
+    <div *ngIf="createUserForm.controls['newPassword'].invalid && (createUserForm.controls['newPassword'].dirty || createUserForm.controls['newPassword'].touched)" class="field-error">
+        Password is required. Keep this to yourself!
+      </div>
+</div>
+
+<div class="field">
+    <p>What archetype are you?</p>
+    <label for="header">Header</label>
+    <input type="text" maxlength="60">
+</div>
+
+<div class="field">
+    <p>Tell us more about that!</p>
+    <label for="newBio">Bio</label>
+    <textarea name="newbio" id="" cols="30" rows="10"></textarea>
+</div>
+
+<button type="submit" [disabled]="createUserForm.invalid" [ngClass]="{'disabled-button': createUserForm.invalid}" ><a routerLink="/profile">Create User</a></button>
+</form>
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+</div>
+<p>{{ newUsername }}</p>

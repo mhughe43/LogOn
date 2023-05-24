@@ -1,0 +1,23 @@
+<div class="wholeform">
+
+<h2>Login</h2>
+
+<form (ngSubmit)="login()">
+  <div class="field">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div>
+
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+
+  <button type="submit">Login</button>
+  <a routerLink="/new-user">Create Profile</a>
+</form>
+
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+</div>

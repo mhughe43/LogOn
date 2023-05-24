@@ -1,0 +1,115 @@
+
+
+.wholeform{
+    position: relative;
+    left: 35%;
+    
+}
+
+h2{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    width: 500px;
+    margin-top: 50px;
+    color: whitesmoke;
+    text-shadow: 2px 2px #06391a;
+    font-size: 30pt;
+}
+
+form{
+    border: 2px solid whitesmoke;
+    border-radius: 20px 2px;
+    width: 500px;
+    text-align: center;
+}
+
+label{
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20pt;
+    color: whitesmoke;
+    text-shadow: 2px 2px #06391a;
+}
+
+p{
+    font-family: 'Dosis', sans-serif;
+    font-size: 16pt;
+    margin: 5px;
+    font-weight: 700;
+    color: whitesmoke;
+    text-shadow: 2px 2px #06391a;
+}
+
+input, textarea{
+    border-radius: 5px;
+}
+
+.required{
+    color: red;
+    margin: 0;
+
+}
+
+.field{
+    margin: 10px;
+}
+
+button{
+    margin: 10px;
+    background-color: #06391a; /* Green */
+    border: 2px solid white;
+    border-radius: 10px 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: rgb(12, 47, 12) 5px 5px 6px;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 2px 2px 6px rgb(12, 47, 12);
+  transform: translateY(4px);
+}
+
+.disabled-button{
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  /* Disable active effect */
+  user-select: none;
+    
+
+}
+
+.error{
+    color: rgb(178, 8, 8);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.field-error{
+    color: rgb(178, 8, 8);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.success{
+    color: #06391a;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
